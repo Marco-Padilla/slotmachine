@@ -1,0 +1,88 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url("/img/fondo.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  font-family: "Arial", sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+  overflow: hidden; /* Elimina scroll innecesario */
+}
+
+.slot-machine {
+  display: inline-block;
+  margin-top: 120px;
+  transform: scale(1.3); /* Escala la máquina un poco más grande */
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 120px);
+  grid-template-rows: repeat(3, 120px);
+  gap: 0;
+  justify-content: center;
+  margin-bottom: 30px;
+  border: 4px solid #fac800;
+  box-shadow: 0 0 15px #fff;
+}
+
+.cell {
+  width: 120px;
+  height: 120px;
+  background: #fff;
+  border: 1px solid #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  box-shadow: inset 0 0 3px #000000;
+}
+
+.slot-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.2s ease-in-out, filter 0.2s ease-in-out;
+}
+
+.spinning {
+  transform: scale(1.1);
+  filter: blur(1px);
+}
+
+#spinButton {
+  padding: 20px 40px;
+  font-size: 28px;
+  background: #fac800;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
+  box-shadow: 0 0 15px #131313;
+  transition: background 0.3s ease;
+}
+
+#spinButton:hover {
+  background: #fa8500;
+}
+
+/* Imágenes de resultado */
+#imgGanaste,
+#imgPerdiste {
+  max-width: 100%;
+  height: auto;
+}
+
+.participaimg {
+  margin-top: 40px;
+}
